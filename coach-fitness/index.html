@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FORGE Training — Coach Fitness Personal en Bogotá</title>
+  <meta name="description" content="Entrenamiento personalizado en Bogotá que transforma cuerpos y mentalidades. Programas de fuerza, pérdida de grasa y rendimiento. Empieza hoy." />
+  <meta property="og:title" content="FORGE Training — Forja el físico que mereces" />
+  <meta property="og:description" content="Coach fitness personal en Bogotá. Resultados reales, sin excusas." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            carbon:  { DEFAULT: '#0A0A0A', light: '#141414', mid: '#1C1C1C' },
+            fuego:   { DEFAULT: '#E03B24', dark: '#B82D18', light: '#F05540' },
+            blanco:  { DEFAULT: '#F5F5F5' },
+            amarillo:{ DEFAULT: '#F5B700' },
+          },
+          fontFamily: {
+            display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
+            body:    ['Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FORGE Training",
+    "description": "Entrenamiento personal y coaching fitness en Bogotá",
+    "telephone": "<!-- TODO: teléfono -->",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "<!-- TODO: dirección -->",
+      "addressLocality": "Bogotá",
+      "addressCountry": "CO"
+    },
+    "priceRange": "$$$"
+  }
+  </script>
+  <!-- TODO: insertar ID de medición GA4 -->
+</head>
+<body class="font-body bg-carbon text-blanco overflow-x-hidden">
+
+  <!-- HEADER -->
+  <header id="header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#inicio" class="font-display text-3xl tracking-widest text-blanco" aria-label="FORGE Training — inicio">
+        FORGE<span class="text-fuego">.</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-10" aria-label="Menú principal">
+        <a href="#programas"   class="nav-link">Programas</a>
+        <a href="#resultados"  class="nav-link">Resultados</a>
+        <a href="#coach"       class="nav-link">El Coach</a>
+        <a href="#planes"      class="nav-link">Planes</a>
+        <a href="#empezar"     class="btn-nav" id="cta-nav-empezar">Empezar</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden p-2 text-blanco" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-carbon-light border-t border-fuego/30">
+      <nav class="flex flex-col px-6 py-5 gap-3" aria-label="Menú móvil">
+        <a href="#programas"  class="mobile-link">Programas</a>
+        <a href="#resultados" class="mobile-link">Resultados</a>
+        <a href="#coach"      class="mobile-link">El Coach</a>
+        <a href="#planes"     class="mobile-link">Planes</a>
+        <a href="#empezar"    class="btn-nav mt-3 text-center">Empezar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══ HERO ═══ -->
+    <section id="inicio" class="relative min-h-screen flex items-center overflow-hidden" aria-label="Portada">
+      <img
+        src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&q=80&auto=format&fit=crop&crop=center"
+        alt="Atleta entrenando con pesas en sesión FORGE Training"
+        class="absolute inset-0 w-full h-full object-cover object-center"
+        width="1600" height="900"
+      />
+      <div class="hero-overlay absolute inset-0"></div>
+      <!-- Watermark FORGE -->
+      <div class="forge-watermark absolute right-0 bottom-0 pointer-events-none select-none" aria-hidden="true">FORGE</div>
+      <div class="relative max-w-7xl mx-auto px-6 w-full py-32">
+        <p class="text-fuego font-body text-xs tracking-[0.5em] uppercase mb-6 reveal-up">Coach personal · Bogotá · Colombia</p>
+        <h1 class="font-display text-7xl sm:text-9xl md:text-[10rem] lg:text-[12rem] leading-[0.85] text-blanco mb-6 reveal-up" style="animation-delay:.1s">
+          FORJA<br /><span class="text-fuego">EL FÍSICO</span><br />QUE<br />MERECES
+        </h1>
+        <p class="text-blanco/50 text-lg max-w-md mb-10 font-light reveal-up" style="animation-delay:.2s">
+          Entrenamiento personalizado real. Sin planes genéricos, sin excusas. Tu cuerpo, tu proceso, tu resultado.
+        </p>
+        <div class="flex flex-wrap gap-4 reveal-up" style="animation-delay:.3s">
+          <a href="#empezar" class="btn-hero-primary" id="cta-hero-empezar">Empieza hoy</a>
+          <a href="#resultados" class="btn-hero-ghost">Ver resultados</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PROGRAMAS ═══ -->
+    <section id="programas" class="py-28 bg-carbon-mid" aria-label="Programas de entrenamiento">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-16 reveal-up">
+          <span class="tag-label text-fuego">Programas</span>
+          <h2 class="font-display text-6xl md:text-7xl text-blanco mt-1 leading-none">LO QUE HACEMOS</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="program-card reveal-up">
+            <div class="program-card__num font-display">01</div>
+            <h3 class="program-card__title font-display">FUERZA &<br />POTENCIA</h3>
+            <p class="program-card__desc">Periodización inteligente para construir músculo de verdad y moverse con autoridad.</p>
+            <ul class="program-card__list">
+              <li>Evaluación de fuerza inicial</li>
+              <li>Progresión semanal estructurada</li>
+              <li>Control de técnica en cada movimiento</li>
+            </ul>
+          </div>
+          <div class="program-card program-card--featured reveal-up" style="animation-delay:.1s">
+            <div class="program-card__num font-display text-fuego">02</div>
+            <div class="program-featured-label">Más solicitado</div>
+            <h3 class="program-card__title font-display">TRANSFORMACIÓN<br />CORPORAL</h3>
+            <p class="program-card__desc">Pérdida de grasa y ganancia muscular simultánea. 12 semanas, cambio visible.</p>
+            <ul class="program-card__list">
+              <li>Rutina + nutrición integradas</li>
+              <li>Seguimiento semanal de composición</li>
+              <li>Check-ins por WhatsApp</li>
+            </ul>
+          </div>
+          <div class="program-card reveal-up" style="animation-delay:.2s">
+            <div class="program-card__num font-display">03</div>
+            <h3 class="program-card__title font-display">RENDIMIENTO<br />ATLÉTICO</h3>
+            <p class="program-card__desc">Para deportistas que quieren llevar su físico y su rendimiento al siguiente nivel.</p>
+            <ul class="program-card__list">
+              <li>Análisis de movimiento</li>
+              <li>Trabajo de movilidad y potencia</li>
+              <li>Periodización por deporte</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RESULTADOS / STATS ═══ -->
+    <section id="resultados" class="py-28 bg-fuego" aria-label="Resultados">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 reveal-up">
+          <h2 class="font-display text-6xl md:text-8xl text-blanco leading-none">LOS NÚMEROS<br />NO MIENTEN</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div class="reveal-up">
+            <p class="font-display text-6xl md:text-8xl text-carbon leading-none">+180</p>
+            <p class="text-fuego-dark font-bold text-sm mt-2 uppercase tracking-wider">Clientes transformados</p>
+          </div>
+          <div class="reveal-up" style="animation-delay:.1s">
+            <p class="font-display text-6xl md:text-8xl text-carbon leading-none">7</p>
+            <p class="text-fuego-dark font-bold text-sm mt-2 uppercase tracking-wider">Años de experiencia</p>
+          </div>
+          <div class="reveal-up" style="animation-delay:.2s">
+            <p class="font-display text-6xl md:text-8xl text-carbon leading-none">94%</p>
+            <p class="text-fuego-dark font-bold text-sm mt-2 uppercase tracking-wider">Alcanzan su meta</p>
+          </div>
+          <div class="reveal-up" style="animation-delay:.3s">
+            <p class="font-display text-6xl md:text-8xl text-carbon leading-none">12</p>
+            <p class="text-fuego-dark font-bold text-sm mt-2 uppercase tracking-wider">Semanas para verte diferente</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ EL COACH ═══ -->
+    <section id="coach" class="py-28 bg-carbon overflow-hidden" aria-label="El coach">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="reveal-left">
+            <img
+              src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=700&q=80&auto=format&fit=crop"
+              alt="Coach principal de FORGE Training"
+              loading="lazy" width="700" height="800"
+              class="rounded-xl w-full object-cover shadow-2xl"
+              style="max-height:580px;object-position:top"
+            />
+          </div>
+          <div class="reveal-right">
+            <span class="tag-label text-fuego">El coach</span>
+            <h2 class="font-display text-5xl md:text-7xl text-blanco mt-1 mb-4 leading-none"><!-- TODO:<br />NOMBRE --></h2>
+            <p class="text-amarillo text-sm font-bold uppercase tracking-widest mb-6">Coach Certificado NSCA · Especialista en Fuerza y Acondicionamiento</p>
+            <p class="text-blanco/55 text-lg mb-5 leading-relaxed">Con más de 7 años transformando físicos y cambiando hábitos en Bogotá. Cree que el entrenamiento de calidad no debería ser un privilegio.</p>
+            <p class="text-blanco/55 text-lg mb-10 leading-relaxed">Su método: ciencia del ejercicio + honestidad + seguimiento real. Sin trucos, sin suplementos mágicos, sin promesas vacías.</p>
+            <div class="flex flex-wrap gap-4">
+              <div class="cert-tag">NSCA-CSCS</div>
+              <div class="cert-tag">FMS Nivel 2</div>
+              <div class="cert-tag">Nutrición Deportiva</div>
+              <div class="cert-tag">Crossfit Level 1</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TESTIMONIOS ═══ -->
+    <section class="py-28 bg-carbon-light" aria-label="Testimonios">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-14 reveal-up">
+          <span class="tag-label text-fuego">Testimonios</span>
+          <h2 class="font-display text-6xl md:text-7xl text-blanco mt-1 leading-none">ELLOS YA<br />LO LOGRARON</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <blockquote class="review-card reveal-up">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"En 3 meses perdí 14 kg y gané más músculo del que esperaba. El seguimiento es constante y la motivación, real."</p>
+            <footer class="review-author">— <!-- TODO --> Miguel T. · <cite>Google</cite></footer>
+          </blockquote>
+          <blockquote class="review-card review-card--featured reveal-up" style="animation-delay:.1s">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Nunca había disfrutado entrenar hasta que llegué aquí. El plan es totalmente personalizado y los resultados, increíbles."</p>
+            <footer class="review-author">— <!-- TODO --> Diana R. · <cite>Google</cite></footer>
+          </blockquote>
+          <blockquote class="review-card reveal-up" style="animation-delay:.2s">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Vine después de lesionarme la rodilla. Con FORGE recuperé fuerza y ahora corro maratones. 100% recomendado."</p>
+            <footer class="review-author">— <!-- TODO --> Sebastián V. · <cite>Google</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PLANES ═══ -->
+    <section id="planes" class="py-28 bg-carbon-mid" aria-label="Planes y precios">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 reveal-up">
+          <span class="tag-label text-fuego">Planes</span>
+          <h2 class="font-display text-6xl md:text-7xl text-blanco mt-1 leading-none">ELIGE TU<br />ARMA</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="pricing-card reveal-up">
+            <p class="pricing-card__label font-display">BÁSICO</p>
+            <p class="pricing-card__price font-display">$350k<span class="pricing-card__period">/mes</span></p>
+            <ul class="pricing-card__features">
+              <li>4 sesiones mensuales (1x sem.)</li>
+              <li>Plan de entrenamiento</li>
+              <li>Evaluación inicial</li>
+              <li>Soporte por WhatsApp</li>
+            </ul>
+            <a href="#empezar" class="btn-pricing-ghost">Empezar</a>
+          </div>
+          <div class="pricing-card pricing-card--featured reveal-up" style="animation-delay:.1s">
+            <div class="pricing-card__badge">Recomendado</div>
+            <p class="pricing-card__label font-display text-fuego">INTENSIVO</p>
+            <p class="pricing-card__price font-display">$620k<span class="pricing-card__period">/mes</span></p>
+            <ul class="pricing-card__features">
+              <li>8 sesiones mensuales (2x sem.)</li>
+              <li>Plan de entrenamiento + nutrición</li>
+              <li>Seguimiento semanal de composición</li>
+              <li>Acceso ilimitado por WhatsApp</li>
+              <li>Evaluaciones de progreso</li>
+            </ul>
+            <a href="#empezar" class="btn-pricing-primary" id="cta-plan-intensivo">Empezar</a>
+          </div>
+          <div class="pricing-card reveal-up" style="animation-delay:.2s">
+            <p class="pricing-card__label font-display">ÉLITE</p>
+            <p class="pricing-card__price font-display">$950k<span class="pricing-card__period">/mes</span></p>
+            <ul class="pricing-card__features">
+              <li>12 sesiones mensuales (3x sem.)</li>
+              <li>Programa 100% personalizado</li>
+              <li>Nutrición detallada con macros</li>
+              <li>Disponibilidad prioritaria</li>
+              <li>Análisis mensual de composición</li>
+            </ul>
+            <a href="#empezar" class="btn-pricing-ghost">Empezar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA EMPEZAR ═══ -->
+    <section id="empezar" class="py-28 bg-carbon" aria-label="Empieza tu transformación">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <div class="reveal-up">
+          <h2 class="font-display text-6xl md:text-8xl text-blanco leading-none mb-4">¿LISTO PARA<br /><span class="text-fuego">EMPEZAR?</span></h2>
+          <p class="text-blanco/40 text-lg mb-10">Escríbeme por WhatsApp. Hablamos de tus objetivos y te armo el plan ideal. Sin compromiso.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://wa.me/57XXXXXXXXXX?text=Hola%2C%20vengo%20de%20la%20web%20de%20FORGE%20Training%20y%20quiero%20empezar%20mi%20transformaci%C3%B3n" class="btn-whatsapp" id="cta-whatsapp-empezar" aria-label="Contactar por WhatsApp">
+              <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Escribir ahora
+            </a>
+            <a href="tel:+57XXXXXXXXXX" class="btn-ghost-fire" id="cta-tel-empezar" aria-label="Llamar">Llamar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-carbon-light py-10 px-6 border-t border-blanco/5" role="contentinfo">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-display text-2xl text-blanco tracking-widest">FORGE<span class="text-fuego">.</span></p>
+      <p class="text-blanco/20 text-xs text-center">© 2024 FORGE Training · Bogotá, Colombia · DEMO</p>
+      <div class="flex gap-5">
+        <a href="<!-- TODO -->" class="social-link" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="<!-- TODO -->" class="social-link" aria-label="YouTube"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/57XXXXXXXXXX?text=Hola%2C%20vengo%20de%20la%20web%20de%20FORGE%20Training" class="whatsapp-fab" id="cta-whatsapp-fab" aria-label="Abrir WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
